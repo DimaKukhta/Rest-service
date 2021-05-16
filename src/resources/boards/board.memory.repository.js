@@ -1,5 +1,3 @@
-
-
 let repository = [];
 
 const getAll = async () => repository;

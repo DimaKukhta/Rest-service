@@ -1,4 +1,3 @@
-// const { repository } = require('../boards/board.memory.repository');
 let repository = [];
 
 const getAll = (id) => repository.filter((element) => element.id !== id);
@@ -43,12 +42,4 @@ const deleteTask = (taskId) => {
   return 404;
 };
 
-/* const repository = [];
-
-const getAll = async () => repository;
-
-const createBoard = async (board) => repository.push(board);
-
-const getById = async (id) => repository.find((element) => element.id === id); */
-
-module.exports = { getAll, getById, createTask, updateTask, deleteTask };
+module.exports = { getAll, getById, createTask, updateTask, deleteTask, repository };

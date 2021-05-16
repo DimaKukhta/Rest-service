@@ -1,7 +1,5 @@
 const uuid = require('uuid');
 
-const getIdForColumns = (columns) => columns.map((element) => ({id:uuid.v1(), ...element})) 
-
 class Board {
   constructor({
     id = uuid.v1(),
@@ -10,7 +8,7 @@ class Board {
   } = {}) {
     this.id = id;
     this.title = title;
-    this.columns = getIdForColumns(columns);
+    this.columns = columns;
   }
 
   static toResponse(board) {
